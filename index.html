@@ -15,15 +15,25 @@
              return color;
           }
           $(document).ready(function(){
-             $('#large_box').click(function(){
-                alert('you clicked the big box!');  
+            //  $('#large_box').click(function(){
+            //     alert('you clicked the big box!');  
          //comment this out when you have figured out what event.stopPropagation is used for
-             })
+             // })
              $('.side_box').click(function(event){
                 event.stopPropagation();
              })
              $('.middle_box').click(function(event){
                 event.stopPropagation();
+             });
+             $('#large_box').click(function(){
+                $('#large_box').children().css('background', random_color());
+                 $('#large_box').css('background', random_color());
+             })
+             $('.middle_box').click(function(){
+                $('.middle_box').parent().css('background', random_color());
+             })
+             $('.side_box').click(function(){
+                $('.side_box').siblings().css('background', random_color());
              })
           });
       </script>
