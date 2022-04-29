@@ -1,0 +1,24 @@
+* {
+    margin: 0 auto;
+    border: 0;
+    background-color: rgb( 69 69 69);
+    color: #FFF;
+    vertical-align: top;
+    border: 1px solid green;
+}
+/* body{
+    height: 100%;
+} */
+#container {
+    display: flex;
+    background-color: white;
+    width: 80%;
+    height: 300px;
+}
+.boxes {
+    display: inline-block;
+    margin: auto;
+    width: 20%;
+    height: 55%;
+    background-color: darkslategrey;
+}
