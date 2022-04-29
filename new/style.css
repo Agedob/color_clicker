@@ -11,13 +11,14 @@
 } */
 #container {
     display: flex;
+    align-items: center;
     background-color: white;
     width: 80%;
     height: 300px;
 }
 .boxes {
     display: inline-block;
-    margin: auto;
+    /* margin: auto; */
     width: 20%;
     height: 55%;
     background-color: darkslategrey;

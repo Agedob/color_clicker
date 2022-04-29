@@ -1,27 +1,45 @@
+// function color_combinator (){
+//     value = 'rgb ('
+//     for (x = 0; x < 3; x++){
+//     i = Math.floor(Math.random() * 256)
+//         value += (' ' + i)
+//         console.log(value)
+//     }
+//     value = value + " )"
+//     console.log( value)
+//     return value
+// }
+
+function random_color()
+{
+   var rgb = ['a','b','c','0','1','2','3','4'];
+   color = '#'  //this is what we'll return!
+   for(var i = 0; i < 6; i++) 
+   {
+      x = Math.floor((Math.random()* 8))
+      color += rgb[x]; 
+   }
+   return color;
+}
+
+
 $(document).ready(function(){
 
-    $( ".boxes" ).click(function() {
 
-        console.log( $( this ).css([
-            "width", "height", "color", "background-color"
-          ]) )
+    $( ".boxes, #container" ).click(function(event) {
+        console.log("clicked " + $(this)[0]['id']);
+        event.stopPropagation(); 
+    })   
 
+    $( ".boxes, #container" ).click(function() {
+        // console.log($(this))
+        $( this ).css("background", random_color());
+            // console.log("you clicked " + $(this)[0]['id']);
     })
 
 })
 
 
-//  function random_color()
-//  {
-//     var rgb = ['a','b','c','d','e','f','0','1','2','3','4','5','6','7','8','9'];
-//     color = '#'  //this is what we'll return!
-//     for(var i = 0; i < 6; i++) 
-//     {
-//        x = Math.floor((Math.random()*16))
-//        color += rgb[x]; 
-//     }
-//     return color;
-//  }
 //  $(document).ready(function(){
 //    //  $('#large_box').click(function(){
 //    //     alert('you clicked the big box!');  
