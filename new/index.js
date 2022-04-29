@@ -1,16 +1,14 @@
 $(document).ready(function(){
+
     $( ".boxes" ).click(function() {
-        console.log("Clicked Me")
+
+        console.log( $( this ).css([
+            "width", "height", "color", "background-color"
+          ]) )
+
     })
+
 })
-
-
-
-
-
-// $( "#target" ).click(function() {
-//   alert( "Handler for .click() called." );
-// });
 
 
 //  function random_color()
