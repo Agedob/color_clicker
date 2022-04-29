@@ -16,7 +16,7 @@
     width: 80%;
     height: 300px;
 }
-.boxes {
+.boxes, #box_2 {
     display: inline-block;
     /* margin: auto; */
     width: 20%;

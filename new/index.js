@@ -28,14 +28,25 @@ $(document).ready(function(){
 
     $( ".boxes, #container" ).click(function(event) {
         console.log("clicked " + $(this)[0]['id']);
-        event.stopPropagation(); 
-    })   
+        event.stopPropagation(); // just google it 
+    }); 
 
-    $( ".boxes, #container" ).click(function() {
-        // console.log($(this))
-        $( this ).css("background", random_color());
-            // console.log("you clicked " + $(this)[0]['id']);
-    })
+    $( "#box_2" ).click(function(){
+        $( this ).parent().css("background", random_color())
+    });
+    
+    $( ".boxes" ).click(function() {
+        console.log($(this))
+        $( this ).siblings().css("background", random_color());
+            console.log("you clicked " + $(this)[0]['id']);
+    });
+    
+    $( "#container" ).click(function(){
+
+        $(this).css("background", random_color());
+        $(this).children().css("background", random_color()); 
+
+    });
 
 })
 
