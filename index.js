@@ -26,7 +26,7 @@ function random_color()
 $(document).ready(function(){
 
 
-    $( ".boxes, #container" ).click(function(event) {
+    $( ".boxes, #container, #box_2" ).click(function(event) {
         console.log("clicked " + $(this)[0]['id']);
         event.stopPropagation(); // just google it 
     }); 
@@ -38,7 +38,7 @@ $(document).ready(function(){
     $( ".boxes" ).click(function() {
         console.log($(this))
         $( this ).siblings().css("background", random_color());
-            console.log("you clicked " + $(this)[0]['id']);
+            // console.log("you clicked " + $(this)[0]['id']);
     });
     
     $( "#container" ).click(function(){
@@ -49,27 +49,3 @@ $(document).ready(function(){
     });
 
 })
-
-
-//  $(document).ready(function(){
-//    //  $('#large_box').click(function(){
-//    //     alert('you clicked the big box!');  
-// //comment this out when you have figured out what event.stopPropagation is used for
-//     // })
-//     $('.side_box').click(function(event){
-//        event.stopPropagation();
-//     })
-//     $('.middle_box').click(function(event){
-//        event.stopPropagation();
-//     });
-//     $('#large_box').click(function(){
-//        $('#large_box').children().css('background', random_color());
-//         $('#large_box').css('background', random_color());
-//     })
-//     $('.middle_box').click(function(){
-//        $('.middle_box').parent().css('background', random_color());
-//     })
-//     $('.side_box').click(function(){
-//        $('.side_box').siblings().css('background', random_color());
-//     })
-//  });
